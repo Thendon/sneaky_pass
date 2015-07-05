@@ -4,7 +4,7 @@ ITEM.Material = 'licence/icon_det.png'
 ITEM.Except = true
 
 function ITEM:OnEquip(ply, modifications)
-	ply:ChatPrint( "[DPass] ausgerüstet! Du wirst am Rundenstart Detective!" )
+	ply:ChatPrint( "[DPass] equipped! You will be detective in the next round!" )
 	print( "[DPass] of ", ply:Nick(), " equiped" )
 end
 
@@ -24,12 +24,12 @@ if SERVER then
 						v:AddCredits(GetConVarNumber("ttt_det_credits_starting"))
 						v:PS_TakeItem('sneaky_detective_pass')
 						print( "[DPass] ", v:Nick(), " used a Detective Pass" )
-						v:ChatPrint( "[DPass] wurde eingelöst!" )
+						v:ChatPrint( "[DPass] was redeemed!" )
 					else
-						v:ChatPrint( "[DPass] konnte nicht eingelöst werden! Du warst bereits "..v:GetRoleString().."!" )
+						v:ChatPrint( "[DPass] couldn't be redeemed! You were already "..v:GetRoleString().."!" )
 					end
 				else
-					v:ChatPrint( "[DPass] konnte nicht eingelöst werden! Jemand anderes hat einen Pass eingelöst!" )
+					v:ChatPrint( "[DPass] couldn't be redeemed! Someone else has used his pass!" )
 				end
 			end
 		end		

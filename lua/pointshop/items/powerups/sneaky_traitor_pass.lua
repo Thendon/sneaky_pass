@@ -4,7 +4,7 @@ ITEM.Material = 'licence/icon_traitor.png'
 ITEM.Except = true
 
 function ITEM:OnEquip(ply, modifications)
-	ply:ChatPrint( "[TPass] ausgerüstet! Du wirst am Rundenstart Traitor!" )
+	ply:ChatPrint( "[TPass] equipped! You will be traitor in the next round!" )
 	print( "[TPass] of ", ply:Nick(), " equiped" )
 end
 
@@ -24,12 +24,12 @@ if SERVER then
 						v:AddCredits(GetConVarNumber("ttt_credits_starting"))
 						v:PS_TakeItem('sneaky_traitor_pass')
 						print( "[TPass] ", v:Nick(), " used a Traitor Pass" )
-						v:ChatPrint( "[TPass] wurde eingelöst!" )
+						v:ChatPrint( "[TPass] was redeemed!" )
 					else
-						v:ChatPrint( "[TPass] konnte nicht eingelöst werden! Du warst bereits "..v:GetRoleString().."!" )
+						v:ChatPrint( "[TPass] couldn't be redeemed! You were already "..v:GetRoleString().."!" )
 					end
 				else
-					v:ChatPrint( "[TPass] konnte nicht eingelöst werden! Jemand anderes hat einen Pass eingelöst!" )
+					v:ChatPrint( "[TPass] couldn't be redeemed! Someone else has used his pass!" )
 				end
 			end
 		end		
