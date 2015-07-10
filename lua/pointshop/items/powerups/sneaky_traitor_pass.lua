@@ -1,3 +1,5 @@
+resource.AddFile("materials/licence/icon_traitor.png")
+
 ITEM.Name = 'Licence to Kill (Traitor)'
 ITEM.Price = 3000
 ITEM.Material = 'licence/icon_traitor.png'

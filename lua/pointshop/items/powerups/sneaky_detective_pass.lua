@@ -1,3 +1,5 @@
+resource.AddFile("materials/licence/icon_det.png")
+
 ITEM.Name = 'Sherlock Mode (Detective)'
 ITEM.Price = 1000
 ITEM.Material = 'licence/icon_det.png'
