@@ -1,7 +1,8 @@
-resource.AddFile("materials/licence/icon_det.png")
+CreateConVar("ttt_dpass_name","Sherlock Mode (Detective)",{FCVAR_ARCHIVE},"Change the price of the Detective Pass")
+CreateConVar("ttt_dpass_price",1000,{FCVAR_ARCHIVE},"Change the name of the Detective Pass")
 
-ITEM.Name = 'Sherlock Mode (Detective)'
-ITEM.Price = 1000
+ITEM.Name = GetConVarString("ttt_dpass_name")
+ITEM.Price = GetConVarNumber("ttt_dpass_price")
 ITEM.Material = 'licence/icon_det.png'
 ITEM.Except = true
 
@@ -34,6 +35,6 @@ if SERVER then
 					v:ChatPrint( "[DPass] couldn't be redeemed! Someone else has used his pass!" )
 				end
 			end
-		end		
+		end
 	end)
 end
