@@ -1,6 +1,8 @@
 CreateConVar("ttt_dpass_name","Sherlock Mode (Detective)",{FCVAR_ARCHIVE},"Change the price of the Detective Pass")
 CreateConVar("ttt_dpass_price",1000,{FCVAR_ARCHIVE},"Change the name of the Detective Pass")
 
+resource.AddFile("materials/licence/icon_det.png")
+
 ITEM.Name = GetConVarString("ttt_dpass_name")
 ITEM.Price = GetConVarNumber("ttt_dpass_price")
 ITEM.Material = 'licence/icon_det.png'
