@@ -1,10 +1,7 @@
-CreateConVar("ttt_tpass_name","Licence to Kill (Traitor)",{FCVAR_ARCHIVE},"Change the price of the Traitor Pass")
-CreateConVar("ttt_tpass_price",3000,{FCVAR_ARCHIVE},"Change the name of the Traitor Pass")
-
 resource.AddFile("materials/licence/icon_traitor.png")
 
-ITEM.Name = GetConVarString("ttt_tpass_name")
-ITEM.Price = GetConVarNumber("ttt_tpass_price")
+ITEM.Name = 'License to Kill (TPass)' --Change name of the Traitor Pass
+ITEM.Price = 3000 --Change price of the Traitor Pass
 ITEM.Material = 'licence/icon_traitor.png'
 ITEM.Except = true
 
